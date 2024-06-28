@@ -1,0 +1,20 @@
+{
+  "extends": [
+    "config:base"
+  ],
+  "nuget": {
+    "enabled": true,
+    "rangeStrategy": "auto"
+  },
+  "packageRules": [
+    {
+      "matchManagers": ["nuget"],
+      "matchUpdateTypes": ["minor", "patch"],
+      "groupName": "all-minor-and-patch-updates",
+      "automerge": false
+    }
+  ],
+  "schedule": [
+    "every 5 minutes"
+  ]
+}
